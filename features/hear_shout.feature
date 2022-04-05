@@ -21,4 +21,9 @@ Then I successfully logout from the app
 And I will be navigated to the <login_screen>
 
 Feature: Search flight
-Scenario: User will 
+Scenario: User will search flight successfully
+Given  I am on home page 
+And <departure date> and <return date> 
+When I click "Search Flight"
+Then I will see earch result
+
