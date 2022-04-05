@@ -21,9 +21,20 @@ Then I successfully logout from the app
 And I will be navigated to the <login_screen>
 
 Feature: Search flight
+
 Scenario: User will search flight successfully
 Given  I am on home page 
 And <departure date> and <return date> 
 When I click "Search Flight"
-Then I will see earch result
+Then I will see search result
 
+
+
+Feature: Tracking flight booking
+
+
+    Scenario: User will see the list of bookings
+    Given The user have book flights before 
+    And the user is open the app
+    When user click "My_Bookings_Button"
+    Then The user will see the list of bookings 
