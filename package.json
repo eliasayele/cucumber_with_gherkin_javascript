@@ -12,5 +12,8 @@
   "devDependencies": {
     "@cucumber/cucumber": "^7.3.2",
     "hamjest": "^3.7.3"
+  },
+  "dependencies": {
+    "sinon": "^13.0.1"
   }
 }

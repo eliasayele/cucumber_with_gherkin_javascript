@@ -1,36 +1,26 @@
-Feature: Hear shout
-Scenario: Listener is within range
-Given Lucy located 15 meters from the sean and Lucy has the ear
-When Sean shout "free beales at Sean's"
-Then Lucy hears Sean's message
+Feature: Shout
 
+  Shouty allows users to "hear" other users "shouts" as long as they are close enough to each other.
 
-Feature:  Login to the system
-Scenario Outline: user will successfully login
-Given I am on Login screen
-And <email> and <password> are filled with valid value
-When I click on “Login_Button”
-Then I successfully login into the app: <result>
+  To do:
+    - only shout to people within a certain distance
 
+  Background:
+    Given a person named Lucy
+    And a person named Sean
 
-Feature: Logout
-Scenario: User will successfully logout
-Given I am on profile screen
-When I click on "Logout_Button"
-Then I successfully logout from the app 
-And I will be navigated to the <login_screen>
+  Rule: Shouts can be heard by other users
 
-Feature: Search flight
+    Scenario: Listener hears a message
+      When Sean shouts "free bagels at Sean's"
+      Then Lucy should hear Sean's message
 
-Scenario: User will search flight successfully
-Given  I am on home page 
-And <departure date> and <return date> 
-When I click "Search Flight"
-Then I will see search result
+    Scenario: Listener hears a different mesage
+      When Sean shouts "Free coffee!"
+      Then Lucy should hear Sean's message
 
-Feature: Tracking flight booking
-    Scenario: User will see the list of bookings
-    Given The user have book flights before 
-    And the user is open the app
-    When user click "My_Bookings_Button"
-    Then The user will see the list of bookings 
+  Rule: Shouts should only be heard if listener is within range
+
+    Scenario: Listener is within range
+
+    Scenario: Listener is out of range
