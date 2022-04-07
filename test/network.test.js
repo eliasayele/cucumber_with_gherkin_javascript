@@ -1,5 +1,5 @@
 const sinon = require('sinon')
-const {Network} = require('../src/shouty')
+const {Network} = require('../src/souty')
 
 describe('Network', () => {
   it('broadcasts a message to all listeners', () => {

@@ -1,19 +1,22 @@
 {
-  "name": "shouty",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "cucumber-js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@cucumber/cucumber": "^7.3.2",
-    "hamjest": "^3.7.3"
-  },
-  "dependencies": {
-    "sinon": "^13.0.1"
-  }
+    "name": "shouty",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha test && cucumber-js -f @cucumber/pretty-formatter"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@cucumber/cucumber": "^7.3.2",
+        "@cucumber/pretty-formatter": "latest",
+        "mocha": "^9.2.2",
+        "hamjest": "^3.7.3",
+        "sinon": "^13.0.1"
+    },
+    "dependencies": {
+        "hamjest": "latest"
+    }
 }

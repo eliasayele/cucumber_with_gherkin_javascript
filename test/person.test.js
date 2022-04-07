@@ -1,6 +1,6 @@
 const assert = require('assert')
 const sinon = require('sinon')
-const {Person} = require('../src/shouty')
+const {Person} = require('../src/souty')
 
 describe('Person', () => {
   let network, networkStub
